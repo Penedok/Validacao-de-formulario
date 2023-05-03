@@ -6,8 +6,7 @@
  Idade:  <br> 
  Email: <br> 
  CPF: <br> 
- Endereço: <br> 
- Cidade e Estado: <br> 
+ CEP <br> 
  e uma palavra chave para gerar o cupom!<br>
  E para desenvolver esse projeto de acordo com desejo do proprietário, trabalharemos com o REGEX e o js.
  

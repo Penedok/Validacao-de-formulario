@@ -12,17 +12,42 @@
     <title>Petshop AmigoFiel</title>
 </head>
 <body>
+    <header>
+        <div class="caixa-imagem">
+            <img src="./imagens/logo.1.webp" class="logo" alt="logo com a imagem de um gatinho">
+            <h3 class="titulo">PetShop</h3>
+        </div>
+    </header>
     <main>
-        <div class="imagem">
-
+        <div class="formulario" >
+            <form class="form">
+                <div class ="grupo">
+                    <label for="name" class="texto-destaque">Nome</label>
+                    <input id="name" name="nome" type="text" placeholder="Digite seu nome completo"> 
+                </div>
+                <div class="grupo">
+                    <label for="rg" class="texto-destaque">RG</label>
+                    <input id="rg" name="rg" type="number" placeholder="Informe seu RG">
+                </div>
+                <div class="grupo">
+                    <label for="cpf" class="texto-destaque">CPF</label>
+                    <input id="cpf" name="cpf" type="number" placeholder="Informe seu CPF">
+                </div>
+                <div class="grupo">
+                    <label for="idade" class="texto-destaque">Idade</label>
+                    <input id="idade" name="idade" type="number" placeholder="Informe a sua idade">
+                </div>
+                <div class="grupo">
+                    <label for="cep" class="texto-destaque">Informe seu CEP</label>
+                    <input id="cep" name="cep" type="number" placeholder="Informe seu CEP">
+                </div>
+            </form>
         </div>
-        <div class="cartao">
-            <p>ola</p>
-        </div>
-
-
-
+        <section class="caixa-btn">
+            <button class="btn" type="button">Enviar</button>
+        </section>
     </main>
+    
 
 </body>
 </html>

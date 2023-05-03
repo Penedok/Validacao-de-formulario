@@ -1,0 +1,69 @@
+ /*HEADER*/
+
+.caixa-imagem{
+   display: flex;
+   justify-content: space-around;
+   align-items: center; 
+}
+.logo{
+    width: 38%;
+}
+.titulo{
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--color-font-body);
+    text-transform: uppercase;
+}
+
+/*CORPO */
+
+.formulario {
+    display: flex;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    flex-direction: column;
+    padding-bottom: 3em;
+    background: var(--background-cartao);
+}
+.form{
+    display: flex;
+    margin-bottom: 1em;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 0.8em;
+}
+.grupo{
+    display: flex;
+    flex-direction: column;
+    padding:  0.5em 0;
+
+}
+.texto-destaque{
+    color: var(--color-font-body);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 1em 0;
+}
+input{
+    padding: 0.7em 5.8em;
+    border-radius: 6px;
+}
+input::placeholder{
+    font-size: var(--font-corpo);
+   cursor: pointer;
+ 
+}
+.caixa-btn{
+   padding: 1.5em;
+   margin-right: 10em;
+
+}
+.btn{
+    padding: 0.5em 3.5em;
+    background: var(--background-cartao);
+    color: var(--color-font-body);
+    font-size: var(--font-corpo);
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
