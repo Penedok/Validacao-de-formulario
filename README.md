@@ -11,3 +11,7 @@
  e uma palavra chave para gerar o cupom</p>
 
 # Tarefas:
+- [ ] Fazer um formulário estilizado com CSS
+- [ ] Capitar os inputs com os dados certos usando REGEX
+- [ ] Criar um cupom de 70% de desconto do petshop
+- [ ] linkar a página de validação de formulário com o cupom se todos os inputs estiverem preenchidos corretamente.
