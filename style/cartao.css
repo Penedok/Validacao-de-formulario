@@ -1,5 +1,4 @@
  /*HEADER*/
-
 .caixa-imagem{
    display: flex;
    justify-content: space-around;
@@ -14,9 +13,18 @@
     color: var(--color-font-body);
     text-transform: uppercase;
 }
+ 
+@media screen and (min-width: 768px) {
+ .logo{
+    width: 16%;
+ }
+
+}
 
 /*CORPO */
-
+.dados{
+    display: none;
+}
 .formulario {
     display: flex;
     border: 1px solid transparent;
@@ -36,7 +44,6 @@
     display: flex;
     flex-direction: column;
     padding:  0.5em 0;
-
 }
 .texto-destaque{
     color: var(--color-font-body);
@@ -48,15 +55,9 @@ input{
     padding: 0.7em 5.8em;
     border-radius: 6px;
 }
-input::placeholder{
-    font-size: var(--font-corpo);
-   cursor: pointer;
- 
-}
 .caixa-btn{
    padding: 1.5em;
    margin-right: 10em;
-
 }
 .btn{
     padding: 0.5em 3.5em;
@@ -66,4 +67,35 @@ input::placeholder{
     font-weight: 600;
     text-transform: uppercase;
     border-radius: 10px;
+}
+
+@media screen and (min-width:768px) {
+ .dados{
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+    color: var(--color-font-body);
+ }
+ .grupo{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+ }   
+ .texto-destaque{
+    padding: 1em 1.5em 1em 0;
+ }
+ .form{
+    padding: 0 5em;
+ }
+ input{
+    background-color: transparent;
+    border-bottom: 1px solid var(--color-font-body);
+    padding-left: 8em;
+ }
+ input::placeholder{
+   color: transparent;
+}
+.caixa-btn{
+    margin-right: 22em;
+}
 }
