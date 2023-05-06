@@ -21,36 +21,72 @@
     <main>
         <div class="formulario" >
             <div class="dados">
-                <h2 class="dados-texto">Preencha os seguintes dados:</h2>
+                <h2 class="dados-texto">Preencha os seguintes dados</h2>
             </div>
             <form class="form">
                 <div class ="grupo">
                     <label for="name" class="texto-destaque">Nome:</label>
-                    <input id="name" name="nome" type="text" placeholder="Digite seu nome "> 
+                    <input id="name" name="nome" type="text" placeholder="Digite seu nome " class="inputs" data-tipo="nome" required> 
+                   
                 </div>
-                <div class="grupo">
-                    <label for="rg" class="texto-destaque">RG:</label>
-                    <input id="rg" name="rg" type="number" placeholder="Informe seu RG">
+                <div class ="grupo">
+                    <label for="email" class="texto-destaque">Email:</label>
+                    <input id="email" name="email" type="email" placeholder="exemple@exemple.com" class="inputs" required data-tipo="email"> 
+                   
+                </div>
+                <div class ="grupo">
+                    <label for="nascimento" class="texto-destaque">Data de nascimento:</label>
+                    <input id="nascimento" name="nascimento" type="date" class="inputs"  data-tipo="dataNascimento" placeholder="Data de Nascimento" required> 
+                   
                 </div>
                 <div class="grupo">
                     <label for="cpf" class="texto-destaque">CPF:</label>
-                    <input id="cpf" name="cpf" type="number" placeholder="Informe seu CPF">
-                </div>
-                <div class="grupo">
-                    <label for="idade" class="texto-destaque">Idade:</label>
-                    <input id="idade" name="idade" type="number" placeholder="Informe a sua idade">
+                    <input id="cpf" name="cpf" type="text" placeholder="Informe seu CPF" class="inputs" data-tipo="cpf" required>
+                   
                 </div>
                 <div class="grupo">
                     <label for="cep" class="texto-destaque">CEP:</label>
-                    <input id="cep" name="cep" type="number" placeholder="Informe seu CEP">
+                    <input id="cep" name="cep" type="text" placeholder="CEP"  class="inputs"  data-tipo="cep" required size="15" maxlength="8" autocomplete="off" >
+                   
                 </div>
+                <div class="grupo">
+                    <label for="logradouro" class="texto-destaque">Logradouro:</label>
+                    <input id="logradouro" name="logradouro" type="text" placeholder="Logradouro" class="inputs verifica"  data-tipo="logradouro"  required >
+                   
+                </div>
+                <div class="grupo">
+                    <label for="bairro" class="texto-destaque">Bairro:</label>
+                    <input id="bairro" name="bairro" type="text" placeholder="Bairro"  class="inputs" required data-tipo="bairro">
+                
+                </div>
+                <div class="grupo">
+                    <label for="cidade" class="texto-destaque">Cidade:</label>
+                    <input id="cidade" name="cidade" type="text" placeholder="Cidade"  class="inputs" data-tipo="cidade"   required >
+                   
+                </div>
+                <div class="grupo">
+                    <label for="estado" class="texto-destaque">Estado:</label>
+                    <input id="estado" name="estado" type="text" placeholder="Estado"  class="inputs" required data-tipo="estado">
+                
+                </div>
+                
+
+
+
+
+
+
+
+
+
+
             </form>
         </div>
         <section class="caixa-btn">
-            <button class="btn" type="button">Enviar</button>
+            <button class="btn" type="button" >Enviar</button>
         </section>
     </main>
     
-
+  <script src="./js/main.js"></script> <!--Um módulo é um arquivo JS normal, mas com algumas peculiaridades-->
 </body>
 </html>
