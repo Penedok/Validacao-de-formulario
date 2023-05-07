@@ -1,19 +1,21 @@
 # Validacao-Formulário:
-<p> Para poder acessar as promoções exclusivas de um PetShop o proprietário pediu para que os clientes preenchessem um formulário 
+<p> Para poder acessar os cupons exclusivos de desconto um PetShop o proprietário pediu para que os clientes preenchessem um formulário 
  com as seguintes informações:
- Nome Completo:
- RG: <br> 
- Idade:  <br> 
+ Nome Completo:<br>
+ Data de Nascimento:  <br> 
  Email: <br> 
  CPF: <br> 
  CEP <br> 
- e uma palavra chave para gerar o cupom!<br>
- E para desenvolver esse projeto de acordo com desejo do proprietário, trabalharemos com o REGEX e o js.
+
+ E para desenvolver esse projeto de acordo com desejo do proprietário, trabalharemos com  JS e API para acesar o CEP.
  
  </p>
 
 # Tarefas:
-- [ ] Fazer um formulário estilizado com CSS
-- [ ] Capitar os inputs com os dados certos usando REGEX
-- [ ] Criar um cupom de 70% de desconto do petshop
-- [ ] linkar a página de validação de formulário com o cupom se todos os inputs estiverem preenchidos corretamente.
+- [X] Fazer um formulário responsivo com FlexBox
+- [X] Capitar os inputs com os dados certos 
+- [X] Criar um cupom de 70% de desconto do petshop
+- [X] Fazer que apenas maiores de Idades tenham acesso ao cupom promocional.
+- [X] Ultilizar uma API para poder acessar os dados do CEP informado
+- [X] Usar uma API de consulta de endereço.
+- [X] Preencher os dados dos inputs: Logradouro | Bairro | Cidade | Estado. com a API de consulta de endereço
