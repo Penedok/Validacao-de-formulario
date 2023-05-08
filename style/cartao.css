@@ -3,9 +3,10 @@
    display: flex;
    justify-content: space-around;
    align-items: center; 
+   padding: 0 0.5em;
 }
 .logo{
-    width: 38%;
+    width: 33%;
 }
 .titulo{
     font-size: 21px;
@@ -22,7 +23,13 @@
 }
 
 /*CORPO */
-
+.dados{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-font-body);
+    padding: 0.9em;
+}
 .formulario {
     display: flex;
     border: 1px solid transparent;
@@ -30,6 +37,7 @@
     flex-direction: column;
     padding-bottom: 3em;
     background: var(--background-cartao);
+    box-shadow: 10px 10px 0 #110019
 }
 .form{
     display: flex;
@@ -68,4 +76,47 @@ input{
     font-weight: 600;
     text-transform: uppercase;
     border-radius: 10px;
+    box-shadow: 10px 10px 0 #110019
+    
 }
+.btn:hover{
+    background: var(--color-font-body);
+    color: var(--background-cartao);
+    transform: rotate(0deg) scale(1.1)
+}
+
+@media screen and (min-width: 768px) {
+   
+.form{
+    padding: 0 2em;
+}
+.caixa-btn{
+    padding: 1.5em 2em 0em 0;
+    margin-right: 10em;
+}
+}
+
+@media screen and (min-width: 1440px) {
+   
+ .logo{
+        width: 10%;
+ }
+ .formulario{
+    padding:  0 2.5em;
+ }
+.texto-destaque{
+    font-size: 21px;
+}
+.dados-texto{
+    font-size: 30px;
+}
+.caixa-btn{
+    padding: 1.5em 10em 1em 0;
+    margin-right: 10em;
+}
+.titulo{
+    font-size: 30px;
+}
+}
+    
+    
