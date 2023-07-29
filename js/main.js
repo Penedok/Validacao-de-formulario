@@ -1,4 +1,4 @@
-
+//validacao de CEP
 async function buscandoCep(ceps){
    try{
     var buscandoCEPNaApi = await fetch(`https://viacep.com.br/ws/${ceps}/json/`);
@@ -22,12 +22,64 @@ async function buscandoCep(ceps){
    catch(erro){
     console.log(erro)
    }
-
 }
 
 var inputCEP = document.querySelector("#cep");
 
 inputCEP.addEventListener("focusout", ()=> buscandoCep (inputCEP.value))
+
+//
+
+//validar CPF
+
+var inputCPF = document.querySelector('#cpf');
+inputCPF.addEventListener('focusout', ()=> validandoCPF(cpf))
+
+
+function validandoCPF(cpf){
+
+   if(inputCPF == '1111111111' || '000000000'){
+    alert ('ola')
+   }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
