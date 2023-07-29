@@ -11,6 +11,8 @@
  
  </p>
 
+ # Trabalhando com  async
+
 # Tarefas:
 - [X] Fazer um formulário responsivo com FlexBox
 - [X] Capitar os inputs com os dados certos 
