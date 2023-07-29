@@ -28,84 +28,33 @@ var inputCEP = document.querySelector("#cep");
 
 inputCEP.addEventListener("focusout", ()=> buscandoCep (inputCEP.value))
 
-//
-
-//validar CPF
-
-var inputCPF = document.querySelector('#cpf');
-inputCPF.addEventListener('focusout', ()=> validandoCPF(cpf))
-
-
-function validandoCPF(cpf){
-
-   if(inputCPF == '1111111111' || '000000000'){
-    alert ('ola')
-   }
 
 
 
 
+//const validacao = document.querySelector('.btn')
 
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const validacao = document.querySelector('.btn')
-
-validacao.addEventListener('click', ()=>{
-    calculaIdade()
-})
+//validacao.addEventListener('click', ()=>{
+//    calculaIdade()
+//})
 
  // validacao de Idade
- function calculaIdade( ){
-    let dateInput = document.getElementById("nascimento");
-    let input = dateInput.value
-    let niver = new Date(input);
+ //function calculaIdade( ){
+   // let dateInput = document.getElementById("nascimento");
+    //let input = dateInput.value
+    //let niver = new Date(input);
 
-    const  idade = Math.floor((Date.now() - niver) / (31557600000));
-        if(idade < 18){
-            alert("Você ainda não é maior de idade!")
-        }else {
+   // const  idade = Math.floor((Date.now() - niver) / (31557600000));
+     //   if(idade < 18){
+       //     alert("Você ainda não é maior de idade!")
+      //  }else {
 
-            window.location='./cupom.html'
+         //   window.location='./cupom.html'
 
-        }
-        return idade
-    }
-
+      //  }
+      //  return idade
+  //  }
+//
  
 
 
