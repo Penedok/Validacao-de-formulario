@@ -1,36 +1,35 @@
-const btn = document.querySelector('.verifica')
 
-btn.addEventListener('click',()=>{
-  let $cep = document.getElementById('cep').value.replace(/\D/g, '');
-  let url = 'https://viacep.com.br/ws/' + $cep + '/json';
-  let request = new XMLHttpRequest();
-
-  request.open('GET', url);
-  request.onerror = function () {
-    document.getElementById('input-mensagem-erro').innerHTML = 'API OFFLINE OU CEP INVALIDO';
-  }
-  request.onload = () =>{
-    let response = JSON.parse(request.responseText)
-
-    const logradouro = document.querySelector("#logradouro")
-    const bairro =  document.querySelector("#bairro")
-    const cidade = document.querySelector("#cidade")
-    const estado = document.querySelector("#estado")
-
-    if(response.erro === true){
-        document.getElementById('input-mensagem-erro').innerHTML = 'Cep nao encontrado'
-
-    }else{
-        
-        logradouro.value = response.logradouro;
-        bairro.value = response.bairro;
-        cidade.value = response.localidade;
-        estado.value = response.uf             
+async function buscandoCep(ceps){
+   try{
+    var buscandoCEPNaApi = await fetch(`https://viacep.com.br/ws/${ceps}/json/`);
+    var traduzindoApi = await buscandoCEPNaApi.json();
+    if(traduzindoApi.erro){
+       throw Error('CEP invalido')
     }
+    var logradouro = document.querySelector('#logradouro');
+    var bairro = document.querySelector('#bairro');
+    var cidade = document.querySelector('#cidade');
+    var estado = document.querySelector('#estado')
+    
+    logradouro.value = traduzindoApi.logradouro;
+    bairro.value = traduzindoApi.bairro;
+    cidade.value = traduzindoApi.localidade;
+    estado.value = traduzindoApi.uf
 
-  }
-  request.send();
-})
+    console.log(traduzindoApi)
+    return traduzindoApi;
+   }
+   catch(erro){
+    console.log(erro)
+   }
+
+}
+
+var inputCEP = document.querySelector("#cep");
+
+inputCEP.addEventListener("focusout", ()=> buscandoCep (inputCEP.value))
+
+
 
 const validacao = document.querySelector('.btn')
 
@@ -48,6 +47,7 @@ validacao.addEventListener('click', ()=>{
         if(idade < 18){
             alert("Você ainda não é maior de idade!")
         }else {
+
             window.location='./cupom.html'
 
         }
