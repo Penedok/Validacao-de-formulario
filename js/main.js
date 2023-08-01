@@ -76,8 +76,6 @@ function isCPF(cpf =0){
       
    }
 
-  
-
    console.log('primeiro dg ' + soma)
    return true;
 
@@ -105,29 +103,28 @@ cpf.addEventListener('focusout',()=> isCPF(cpf.value))
 
 
 
-//const validacao = document.querySelector('.btn')
+const validacao = document.querySelector('.btn')
 
-//validacao.addEventListener('click', ()=>{
-//    calculaIdade()
-//})
+validacao.addEventListener('click', ()=>{
+    calculaIdade()
+})
 
- // validacao de Idade
- //function calculaIdade( ){
-   // let dateInput = document.getElementById("nascimento");
-    //let input = dateInput.value
-    //let niver = new Date(input);
+  //validacao de Idade
+ function calculaIdade( ){
+    let dateInput = document.getElementById("nascimento");
+    let input = dateInput.value
+    let niver = new Date(input);
 
-   // const  idade = Math.floor((Date.now() - niver) / (31557600000));
-     //   if(idade < 18){
-       //     alert("Você ainda não é maior de idade!")
-      //  }else {
+    const  idade = Math.floor((Date.now() - niver) / (31557600000));
+        if(idade < 18){
+            alert("Você ainda não é maior de idade!")
+        }else {
 
-         //   window.location='./cupom.html'
+           window.location='./cupom.html'
 
-      //  }
-      //  return idade
-  //  }
-//
+        }
+        return idade
+  }
  
 
 
