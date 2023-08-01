@@ -30,57 +30,53 @@ var inputCEP = document.querySelector("#cep");
 inputCEP.addEventListener("focusout", ()=> buscandoCep (inputCEP.value))
 
 
+
 //
-var cpf = document.querySelector('#cpf');
-
-function isCPF(cpf =0){
-   cpf = cpf.replace(/\.|-/g,"");
-   let soma= 0; 
-   soma +=  cpf[0] *10;                      //vai implementar 
-   soma +=  cpf[1] *9; 
-   soma +=  cpf[2]  *8
-   soma +=  cpf[3] *7; 
-   soma +=  cpf[4] *6; 
-   soma +=  cpf[5] *5; 
-   soma +=  cpf[6] *4; 
-   soma +=  cpf[7] *3; 
-   soma +=  cpf[8] *2; 
-   soma = (soma*10) %11;
 
 
+//var inputCPF = document.querySelector('#cpf')
+//var numeroCPF = inputCPF.value;
 
-   if(soma ==10 || soma ==11 )
-    soma=0;
-
-  
-
-   soma +=  cpf[0] *11;                      //vai implementar 
-   soma +=  cpf[1] *10; 
-   soma +=  cpf[2]  *9
-   soma +=  cpf[3] *8; 
-   soma +=  cpf[4] *7; 
-   soma +=  cpf[5] *6; 
-   soma +=  cpf[6] *5; 
-   soma +=  cpf[7] *4; 
-   soma +=  cpf[8] *3; 
-   soma +=  cpf[9] *2;
-   soma = (soma*10) %11; 
-   if(soma ==10 || soma ==11 )
-   soma=0;
+//function validaCPF(numeroCPF){
 
 
-   if(soma != cpf[10] && cpf[9]) {
-      false
-      alert('CPF invalido')
-      return
+//   console.log(numeroCPF)
+//   if(!checaCPFRepetido (numeroCPF)){
       
-   }
+//      alert("O CPF não é valido")
 
-   console.log('primeiro dg ' + soma)
-   return true;
+ //  }
+//}
 
-}
-cpf.addEventListener('focusout',()=> isCPF(cpf.value))
+//function checaCPFRepetido(numeroCPF){
+//   const valoresRepetidos = [
+ //     '00000000000',
+   //   '11111111111',
+   //   '22222222222',
+   //   '33333333333',
+    //  '44444444444',
+   //   '55555555555',
+    //  '66666666666',
+    //  '77777777777',
+    //  '88888888888',
+     // '99999999999'
+  // ]
+ //  let cpfValido = true;
+
+  // valoresRepetidos.forEach(valor => {
+   //   if (valor === numeroCPF){
+   //      cpfValido = false;
+  //    }
+ //  })
+
+  // return cpfValido
+//}
+
+
+
+//inputCPF.addEventListener('focusout', () => validaCPF(numeroCPF.value))
+
+//calculo..
 
 
 
@@ -103,28 +99,57 @@ cpf.addEventListener('focusout',()=> isCPF(cpf.value))
 
 
 
-const validacao = document.querySelector('.btn')
 
-validacao.addEventListener('click', ()=>{
-    calculaIdade()
-})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//const validacao = document.querySelector('.btn')
+
+//validacao.addEventListener('click', ()=>{
+ //   calculaIdade()
+//})
 
   //validacao de Idade
- function calculaIdade( ){
-    let dateInput = document.getElementById("nascimento");
-    let input = dateInput.value
-    let niver = new Date(input);
+// function calculaIdade( ){
+ //   let dateInput = document.getElementById("nascimento");
+  //  let input = dateInput.value
+  //  let niver = new Date(input);
 
-    const  idade = Math.floor((Date.now() - niver) / (31557600000));
-        if(idade < 18){
-            alert("Você ainda não é maior de idade!")
-        }else {
+   // const  idade = Math.floor((Date.now() - niver) / (31557600000));
+    //    if(idade < 18){
+    //        alert("Você ainda não é maior de idade!")
+    //    }else {
 
-           window.location='./cupom.html'
+     //      window.location='./cupom.html'
 
-        }
-        return idade
-  }
+     //   }
+    //    return idade
+ // }
  
 
 
