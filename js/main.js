@@ -32,7 +32,7 @@ inputCEP.addEventListener("focusout", ()=> buscandoCep (inputCEP.value))
 
 
 // CPF
-import cpfValido from "./app.js";
+import cpfValido from "./validacoes.js"
 
 
 var inputCPF = document.querySelector('#cpf');
