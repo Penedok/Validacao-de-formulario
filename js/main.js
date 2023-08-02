@@ -31,70 +31,24 @@ inputCEP.addEventListener("focusout", ()=> buscandoCep (inputCEP.value))
 
 
 
-//
+// CPF
+import cpfValido from "./app.js";
 
 
-//var inputCPF = document.querySelector('#cpf')
-//var numeroCPF = inputCPF.value;
+var inputCPF = document.querySelector('#cpf');
+var campoCpf = inputCPF.value
 
-//function validaCPF(numeroCPF){
+inputCPF.addEventListener('blur', ()=> verificaCampo(inputCPF))
 
-
-//   console.log(numeroCPF)
-//   if(!checaCPFRepetido (numeroCPF)){
+function verificaCampo(campoCpf){
+   if(campoCpf.name == "cpf" && campoCpf.value.length >=11){{
+       cpfValido(campoCpf);
       
-//      alert("O CPF não é valido")
-
- //  }
-//}
-
-//function checaCPFRepetido(numeroCPF){
-//   const valoresRepetidos = [
- //     '00000000000',
-   //   '11111111111',
-   //   '22222222222',
-   //   '33333333333',
-    //  '44444444444',
-   //   '55555555555',
-    //  '66666666666',
-    //  '77777777777',
-    //  '88888888888',
-     // '99999999999'
-  // ]
- //  let cpfValido = true;
-
-  // valoresRepetidos.forEach(valor => {
-   //   if (valor === numeroCPF){
-   //      cpfValido = false;
-  //    }
- //  })
-
-  // return cpfValido
-//}
+   }
 
 
-
-//inputCPF.addEventListener('focusout', () => validaCPF(numeroCPF.value))
-
-//calculo..
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   }
+}
 
 
 
