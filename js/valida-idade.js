@@ -17,8 +17,4 @@ function validaIdade(data){
 
    return dataAtual >= dataMais18;   //compara de é maior ou =18anos
 
-   
-   
-
-
 }
