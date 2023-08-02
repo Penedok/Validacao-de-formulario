@@ -1,10 +1,8 @@
 
-
-
-export default function cpfValido(campoCpf){
-    const cpf = campoCpf.value.replace(/\.|-/g,"");
+export default function cpfValido(campoInput){
+    const cpf = campoInput.value.replace(/\.|-/g,"");
    if (validaNumerosRepetidos(cpf) || validaPrimeiroDigito(cpf) ||validaSegundoDigito(cpf)){
-         alert('Esse cpf não existe')
+         alert('Esse CPF não existe!')
    }
 
 }  

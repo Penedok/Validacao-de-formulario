@@ -32,22 +32,30 @@ inputCEP.addEventListener("focusout", ()=> buscandoCep (inputCEP.value))
 
 
 // CPF
-import cpfValido from "./validacoes.js"
+import cpfValido from "./validacoes.js";
+import maiorDeIdade from "./valida-idade.js";
 
 
-var inputCPF = document.querySelector('#cpf');
-var campoCpf = inputCPF.value
+var input = document.querySelectorAll('[required]');
 
-inputCPF.addEventListener('blur', ()=> verificaCampo(inputCPF))
+input.forEach((campoInput) =>{
+   campoInput.addEventListener('blur',()=> validaCampo(campoInput))
 
-function verificaCampo(campoCpf){
-   if(campoCpf.name == "cpf" && campoCpf.value.length >=11){{
-       cpfValido(campoCpf);
-      
+
+})
+
+function validaCampo(campoInput){
+
+   if(campoInput.name == "cpf" && campoInput.value <=11){
+         cpfValido(campoInput)
+   }
+   if(campoInput.name =='aniversario' && campoInput.value !=""){
+      maiorDeIdade(campoInput)
    }
 
 
-   }
+
+
 }
 
 
@@ -82,29 +90,8 @@ function verificaCampo(campoCpf){
 
 
 
-//const validacao = document.querySelector('.btn')
 
-//validacao.addEventListener('click', ()=>{
- //   calculaIdade()
-//})
 
-  //validacao de Idade
-// function calculaIdade( ){
- //   let dateInput = document.getElementById("nascimento");
-  //  let input = dateInput.value
-  //  let niver = new Date(input);
-
-   // const  idade = Math.floor((Date.now() - niver) / (31557600000));
-    //    if(idade < 18){
-    //        alert("Você ainda não é maior de idade!")
-    //    }else {
-
-     //      window.location='./cupom.html'
-
-     //   }
-    //    return idade
- // }
- 
 
 
 
