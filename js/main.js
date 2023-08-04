@@ -29,8 +29,6 @@ var inputCEP = document.querySelector("#cep");
 
 inputCEP.addEventListener("focusout", ()=> buscandoCep (inputCEP.value))
 
-
-
 // CPF
 import cpfValido from "./validacoes.js";
 import maiorDeIdade from "./valida-idade.js";
@@ -52,11 +50,37 @@ function validaCampo(campoInput){
    if(campoInput.name =='aniversario' && campoInput.value !=""){
       maiorDeIdade(campoInput)
    }
-
-
-
-
 }
+
+//
+
+const formulario= document.querySelector('[data-formulario]')
+
+
+
+
+formulario.addEventListener("submit",(e)=>{
+   e.preventDefault()
+
+   alert('eai')
+   const listaRespostas ={
+      "nome": e.target.elements['nome'].value,
+      "email": e.target.elements['email'].value,
+      "aniversario": e.target.elements['aniversario'].value,
+      "cpf": e.target.elements['cpf'].value,
+      "cep": e.target.elements['cep'].value,
+      "logradouro": e.target.elements['logradouro'].value,
+      "bairro": e.target.elements['bairro'].value,
+      "cidade": e.target.elements['cidade'].value,
+      "estado": e.target.elements['estado'].value
+   }
+
+   localStorage.setItem('cadastro' , JSON.stringify(listaRespostas));
+   window.location.href ="../cupom.html";
+
+
+
+})
 
 
 

@@ -24,10 +24,10 @@
             <div class="dados">
                 <h2 class="dados-texto">Preencha os Seguintes Dados</h2>
             </div>
-            <form class="form">
+            <form class="form"  data-formulario>
                 <div class ="grupo">
-                    <label for="name" class="texto-destaque">Nome:</label>
-                    <input id="name" name="nome" type="text" placeholder="Digite seu nome " class="inputs" data-tipo="nome" required> 
+                    <label for="nome" class="texto-destaque">Nome:</label>
+                    <input id="nome" name="nome" type="text" placeholder="Digite seu nome " class="inputs" data-tipo="nome" required> 
                    
                 </div>
                 <div class ="grupo">
@@ -36,7 +36,7 @@
                    
                 </div>
                 <div class ="grupo">
-                    <label for="nascimento" class="texto-destaque">Data de nascimento:</label>
+                    <label for="aniversario" class="texto-destaque">Data de nascimento:</label>
                     <input id="aniversario" name="aniversario" type="date" class="inputs"  data-tipo="dataNascimento" placeholder="Data de Nascimento" required> 
                    
                 </div>
@@ -70,12 +70,12 @@
                     <input id="estado" name="estado" type="text" placeholder="Estado"  class="inputs" required data-tipo="estado">
                 
                 </div>
-                
+                <div class="caixa-btn">
+                    <input class="btn" value="Avançar" id="enviar" type="submit" data-botao-enviar ></input>
+                </div>
             </form>
         </div>
-        <section class="caixa-btn">
-            <button class="btn" type="button" >Enviar</button>
-        </section>
+        
     </main>
     
   <script src="./js/main.js" type="module"></script> 
