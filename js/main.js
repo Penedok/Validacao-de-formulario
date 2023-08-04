@@ -61,8 +61,6 @@ const formulario= document.querySelector('[data-formulario]')
 
 formulario.addEventListener("submit",(e)=>{
    e.preventDefault()
-
-   alert('eai')
    const listaRespostas ={
       "nome": e.target.elements['nome'].value,
       "email": e.target.elements['email'].value,

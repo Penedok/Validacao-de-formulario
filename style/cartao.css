@@ -14,13 +14,8 @@
     color: var(--color-font-body);
     text-transform: uppercase;
 }
- 
-@media screen and (min-width: 768px) {
- .logo{
-    width: 16%;
- }
 
-}
+
 
 /*CORPO */
 .dados{
@@ -39,7 +34,8 @@
     background: var(--background-cartao);
     box-shadow: 10px 10px 0 #110019;
     margin: 0 0 1em 0;
- 
+    width: 100vw;
+   
 }
 .form{
     display: flex;
@@ -89,6 +85,9 @@ input{
 }
 
 @media screen and (min-width: 768px) {
+    .logo{
+        width: 16%;
+ }
    
 .form{
     padding: 0 2em;
@@ -96,6 +95,9 @@ input{
 .caixa-btn{
     padding: 1.5em 2em 0em 0;
     margin-right: 10em;
+}
+.formulario{
+    width: 57vw;
 }
 }
 
@@ -106,6 +108,8 @@ input{
  }
  .formulario{
     padding:  0 2.5em;
+    width: 30vw;
+   
  }
 .texto-destaque{
     font-size: 21px;
