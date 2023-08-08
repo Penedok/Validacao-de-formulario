@@ -29,12 +29,14 @@ var inputCEP = document.querySelector("#cep");
 
 inputCEP.addEventListener("focusout", ()=> buscandoCep (inputCEP.value))
 
+
 // CPF
 import cpfValido from "./validacoes.js";
 import maiorDeIdade from "./valida-idade.js";
 
 
 var input = document.querySelectorAll('[required]');
+const formulario= document.querySelector('[data-formulario]')
 
 input.forEach((campoInput) =>{
    campoInput.addEventListener('blur',()=> validaCampo(campoInput))
@@ -44,7 +46,7 @@ input.forEach((campoInput) =>{
 
 function validaCampo(campoInput){
 
-   if(campoInput.name == "cpf" && campoInput.value <=11){
+   if(campoInput.name == "cpf" && campoInput.value.length >=11){
          cpfValido(campoInput)
    }
    if(campoInput.name =='aniversario' && campoInput.value !=""){
@@ -53,9 +55,6 @@ function validaCampo(campoInput){
 }
 
 //
-
-const formulario= document.querySelector('[data-formulario]')
-
 
 
 

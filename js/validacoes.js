@@ -8,7 +8,7 @@ export default function cpfValido(campoInput){
 }  
 
 function validaNumerosRepetidos(cpf){
-    const numeroRepetidos =[
+    const numeroRepetidos = [
         '00000000000',
         '11111111111',
         '22222222222',
@@ -18,7 +18,7 @@ function validaNumerosRepetidos(cpf){
         '66666666666',
         '77777777777',
         '88888888888',
-        '99999999999', 
+        '99999999999'
     ]
    return numeroRepetidos.includes(cpf)
 }
